@@ -33,22 +33,20 @@
     <body>
         <div class="owl-carousel owl-theme">
             <div class="item" style="background-image: url('{{ asset('images/P Dakhla.jpg') }}');">
-                <a href="/Dakhla_Road_Trip_Best_Program_Morocco" class="btn btn-primary">Detail</a>
+                <a href="{{ route('voyage.detail', ['id' => 1]) }}" class="btn btn-dark">Detail</a>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Taghazout.jpg') }}');">
-                <a href="/Taghazout_White_Beach_Resort" class="btn btn-primary">Detail</a>
+                <a href="{{ route('voyage.detail', ['id' => 2]) }}" class="btn btn-dark">Detail</a>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 3.jpg') }}');">
-                <a href="/Radisson_Blu_Al_Hoceima_5*_Premium_Package" class="btn btn-primary">Detail</a>
+                <a href="{{ route('voyage.detail', ['id' => 3]) }}" class="btn btn-dark">Detail</a>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Saidia.jpg') }}');">
-                <a href="/Dreamy_5*_Destination" class="btn btn-primary">Detail</a>
+                <a href="{{ route('voyage.detail', ['id' => 4]) }}" class="btn btn-dark">Detail</a>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 2.jpg') }}');">
-                <a href="/Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol" class="btn btn-primary">Detail</a>
+                <a href="{{ route('voyage.detail', ['id' => 5]) }}" class="btn btn-dark">Detail</a>
             </div>
-
-            
         </div>
 
         <script>
