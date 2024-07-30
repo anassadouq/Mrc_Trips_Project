@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +5,7 @@
     <title>Contact Mail</title>
 </head>
 <body>
-    <p>Nom voyage: {{ $data['id_voyage'] }}</p>
+    <p>Nom voyage: {{ $data['nom_voyage'] }}</p>
     <p>Date de debut: {{ $data['dateD'] }}</p>
     <p>Nom: {{ $data['nom'] }}</p>
     <p>Prenom: {{ $data['prenom'] }}</p>

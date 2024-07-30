@@ -68,7 +68,9 @@
             }
         </style>
 
-        <a href="{{ route('reservation.create', ['id' => $voyage->id]) }}" class="btn btn-primary">Réservez ce voyage</a>
+        <center>
+            <a href="{{ route('reservation.create', ['id' => $voyage->id]) }}" class="btn btn-dark text-light my-3">Réservez maintenant</a>
+        </center>
         
         @if($voyage->id == 1)
             <div class="mx-2">

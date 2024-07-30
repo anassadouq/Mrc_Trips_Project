@@ -38,10 +38,14 @@ class ReservationController extends Controller
         $reservation->email = $request->input('email');
         $reservation->save();
     
+        // Get the voyage name
+        $voyage = Voyage::find($request->input('id_voyage'));
+    
         // Prepare data for email
         $data = $request->only([
-            'id_voyage', 'dateD', 'nom', 'prenom', 'cin', 'tel', 'ville_depart', 'email'
+            'dateD', 'nom', 'prenom', 'cin', 'tel', 'ville_depart', 'email'
         ]);
+        $data['nom_voyage'] = $voyage->nom;
     
         // Send email to sadouqanas1@gmail.com
         Mail::to('sadouqanas1@gmail.com')->send(new ContactFormMail($data));

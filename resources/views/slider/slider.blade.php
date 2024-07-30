@@ -22,30 +22,70 @@
                 width: 100%;
                 overflow: hidden;
             }
+
             .owl-carousel .item {
-                height: 100vh;
-                width: 100vw;
-                background-size: cover;
-                background-position: center;
+                height: 100vh; /* Full viewport height by default */
+                width: 100vw; /* Full viewport width */
+                background-size: cover; /* Cover the container */
+                background-position: center; /* Center the image */
+                display: flex;
+                align-items: center; /* Center content vertically */
+                justify-content: center; /* Center content horizontally */
             }
+
+            /* Media queries for different screen sizes */
+            @media (min-width: 1300px) {
+                .owl-carousel .item {
+                    height: 140vh; /* Adjust height for larger screens */
+                }
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                .owl-carousel .item {
+                    height: 70vh; /* Adjust height for medium-large screens */
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                .owl-carousel .item {
+                    height: 60vh; /* Adjust height for smaller screens */
+                }
+            }
+
+            @media (max-width: 767px) {
+                .owl-carousel .item {
+                    height: 50vh; /* Adjust height for mobile screens */
+                }
+            }
+
         </style>
     </head>
     <body>
         <div class="owl-carousel owl-theme">
             <div class="item" style="background-image: url('{{ asset('images/P Dakhla.jpg') }}');">
-                <a href="{{ route('voyage.detail', ['id' => 1]) }}" class="btn btn-dark">Detail</a>
+                <div class="text-center">
+                    <a href="{{ route('voyage.detail', ['id' => 1]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Taghazout.jpg') }}');">
-                <a href="{{ route('voyage.detail', ['id' => 2]) }}" class="btn btn-dark">Detail</a>
+                <div class="text-center">
+                    <a href="{{ route('voyage.detail', ['id' => 2]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                </div>            
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 3.jpg') }}');">
-                <a href="{{ route('voyage.detail', ['id' => 3]) }}" class="btn btn-dark">Detail</a>
+            <div class="text-center">
+                    <a href="{{ route('voyage.detail', ['id' => 3]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Saidia.jpg') }}');">
-                <a href="{{ route('voyage.detail', ['id' => 4]) }}" class="btn btn-dark">Detail</a>
+            <div class="text-center">
+                    <a href="{{ route('voyage.detail', ['id' => 4]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 2.jpg') }}');">
-                <a href="{{ route('voyage.detail', ['id' => 5]) }}" class="btn btn-dark">Detail</a>
+            <div class="text-center">
+                    <a href="{{ route('voyage.detail', ['id' => 5]) }}" class="text-dark text-center m-5 btn btn-light">View Details</a>
+                </div>
             </div>
         </div>
 
