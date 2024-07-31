@@ -18,17 +18,17 @@ class ReservationController extends Controller
         ]);
     }
 
-    public function create($id)
+    public function create($nom)
     {
-        $voyage = Voyage::findOrFail($id); // Ensure that Voyage is the correct model
+        $voyage = Voyage::where('nom', $nom)->firstOrFail();
         return view('reservation.create', compact('voyage'));
-    }   
+    }      
 
     public function store(StoreReservationRequest $request)
     {
         // Create and save the reservation
         $reservation = new Reservation();
-        $reservation->id_voyage = $request->input('id_voyage');
+        $reservation->nom_voyage = $request->input('nom_voyage');
         $reservation->dateD = $request->input('dateD');
         $reservation->nom = $request->input('nom');
         $reservation->prenom = $request->input('prenom');
@@ -39,7 +39,7 @@ class ReservationController extends Controller
         $reservation->save();
     
         // Get the voyage name
-        $voyage = Voyage::find($request->input('id_voyage'));
+        $voyage = Voyage::where('nom', $request->input('nom_voyage'))->first();
     
         // Prepare data for email
         $data = $request->only([
@@ -52,12 +52,12 @@ class ReservationController extends Controller
     
         // Redirect to a specific page or route after saving
         return redirect()->route('slider.slider')->with('success', 'Réservation enregistrée avec succès');
-    }          
+    }            
 
-    public function show($voyageId)
+    public function show($voyageNom)
     {
-        $voyage = Voyage::find($voyageId);
-        $reservations = Reservation::where('id_voyage', $voyageId)->get();
+        $voyage = Voyage::find($voyageNom);
+        $reservations = Reservation::where('nom_voyage', $voyageNom)->get();
         return view('reservation.show', compact('reservations', 'voyage'));
     }
 }

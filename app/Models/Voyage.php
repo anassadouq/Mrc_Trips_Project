@@ -15,6 +15,6 @@ class Voyage extends Model
 
     public function reservation()
     {
-        return $this->hasMany(Reservation::class, 'id_voyage');
+        return $this->hasMany(Reservation::class, 'nom_voyage');
     }
 }

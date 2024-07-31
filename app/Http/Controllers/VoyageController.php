@@ -17,7 +17,7 @@ class VoyageController extends Controller
 
     public function create()
     {
-        return view('Voyage.create');
+        return view('voyage.create');
     }
 
     public function store(StoreVoyageRequest $request)
@@ -29,9 +29,9 @@ class VoyageController extends Controller
         return redirect()->route('voyage.index');
     }
     
-    public function show($id)
+    public function show($nom)
     {
-        $voyage = Voyage::findOrFail($id);
+        $voyage = Voyage::where('nom', $nom)->firstOrFail();
         return view('voyage.detail', compact('voyage'));
     }    
 

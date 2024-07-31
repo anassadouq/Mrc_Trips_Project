@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_voyage');
-            $table->foreign('id_voyage')->references('id')->on('voyages')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('nom_voyage');
+            $table->foreign('nom_voyage')->references('nom')->on('voyages')->onUpdate('cascade')->onDelete('cascade');
             $table->date('dateD');
             $table->string('nom');
             $table->string('prenom');

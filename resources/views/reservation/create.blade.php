@@ -7,7 +7,7 @@
                 <form method="post" action="{{ route('reservation.store') }}" class="my-form">
                     @csrf
                     <div class="mb-3">
-                        <input type="hidden" name="id_voyage" value="{{ $voyage->id }}">
+                        <input type="hidden" name="nom_voyage" value="{{ $voyage->nom }}">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Date debut :</label>

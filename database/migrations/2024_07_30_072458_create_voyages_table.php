@@ -9,8 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('voyages', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom');
+            $table->string('nom')->primary();
             $table->timestamps();
         });
     }

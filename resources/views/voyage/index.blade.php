@@ -46,23 +46,23 @@
                         <tr>
                             <td>{{ $voyage->nom }}</td>
                             <td>
-                                @if ($voyage->id == 1)
+                                @if ($voyage->nom == 1)
                                     <a href="/Dakhla_Road_Trip_Best_Program_Morocco">
                                         <span class="material-symbols-outlined text-dark">ads_click</span>
                                     </a>
-                                @elseif ($voyage->id == 2)
+                                @elseif ($voyage->nom == 2)
                                     <a href="/Taghazout_White_Beach_Resort">
                                         <span class="material-symbols-outlined text-dark">ads_click</span>
                                     </a>
-                                @elseif ($voyage->id == 3)
+                                @elseif ($voyage->nom == 3)
                                     <a href="/Radisson_Blu_Al_Hoceima_5*_Premium_Package">
                                         <span class="material-symbols-outlined text-dark">ads_click</span>
                                     </a>
-                                @elseif ($voyage->id == 4)
+                                @elseif ($voyage->nom == 4)
                                     <a href="/Dreamy_5*_Destination">
                                         <span class="material-symbols-outlined text-dark">ads_click</span>
                                     </a>
-                                @elseif ($voyage->id == 5)
+                                @elseif ($voyage->nom == 5)
                                     <a href="/Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol">
                                         <span class="material-symbols-outlined text-dark">ads_click</span>
                                     </a>
@@ -106,9 +106,9 @@
             </div>
             
             <script>
-                function confirmDelete(voyageId) {
+                function confirmDelete(voyageNom) {
                     if (confirm('Êtes-vous sûr de vouloir supprimer ce voyage ?')) {
-                        document.getElementById('deleteForm' + voyageId).submit();
+                        document.getElementById('deleteForm' + voyageNom).submit();
                     }
                 }
             </script>

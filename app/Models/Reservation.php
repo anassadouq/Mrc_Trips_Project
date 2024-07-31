@@ -10,7 +10,7 @@ class Reservation extends Model
 {
     use HasFactory;
     protected $fillable= [
-        'id_voyage',
+        'nom_voyage',
         'dateD',
         'nom',
         'prenom',
@@ -22,6 +22,6 @@ class Reservation extends Model
 
     public function voyage()
     {
-        return $this->belongsTo(Voyage::class, 'id_voyage');
+        return $this->belongsTo(Voyage::class, 'nom_voyage');
     }
 }

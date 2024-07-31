@@ -14,6 +14,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    </head>
+
+    <body>
+
         <style>
             html, body {
                 margin: 0;
@@ -24,67 +28,66 @@
             }
 
             .owl-carousel .item {
-                height: 100vh; /* Full viewport height by default */
-                width: 100vw; /* Full viewport width */
-                background-size: cover; /* Cover the container */
-                background-position: center; /* Center the image */
+                height: 100vh;
+                width: 100vw;
+                background-size: cover;
+                background-position: center;
                 display: flex;
-                align-items: center; /* Center content vertically */
-                justify-content: center; /* Center content horizontally */
+                align-items: center;
+                justify-content: center;
             }
 
             /* Media queries for different screen sizes */
             @media (min-width: 1300px) {
                 .owl-carousel .item {
-                    height: 140vh; /* Adjust height for larger screens */
+                    height: 140vh;
                 }
             }
 
             @media (min-width: 992px) and (max-width: 1199px) {
                 .owl-carousel .item {
-                    height: 70vh; /* Adjust height for medium-large screens */
+                    height: 70vh;
                 }
             }
 
             @media (min-width: 768px) and (max-width: 991px) {
                 .owl-carousel .item {
-                    height: 60vh; /* Adjust height for smaller screens */
+                    height: 60vh;
                 }
             }
 
             @media (max-width: 767px) {
                 .owl-carousel .item {
-                    height: 50vh; /* Adjust height for mobile screens */
+                    height: 50vh;
                 }
             }
 
         </style>
-    </head>
-    <body>
+
         <div class="owl-carousel owl-theme">
             <div class="item" style="background-image: url('{{ asset('images/P Dakhla.jpg') }}');">
                 <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['id' => 1]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'Dakhla_Road_Trip']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Taghazout.jpg') }}');">
                 <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['id' => 2]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'Dreamy_5_Stars_Destination']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>            
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 3.jpg') }}');">
             <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['id' => 3]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'Radisson_Blu_Al_Hoceima_5*_Premium_Package']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Saidia.jpg') }}');">
             <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['id' => 4]) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 2.jpg') }}');">
             <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['id' => 5]) }}" class="text-dark text-center m-5 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'Taghazout_White_Beach_Resort']) }}" class="text-dark text-center m-5 btn btn-light">View Details</a>
                 </div>
             </div>
         </div>
@@ -101,6 +104,7 @@
                 });
             });
         </script>
+
     </body>
     </html>
 @endsection

@@ -69,10 +69,10 @@
         </style>
 
         <center>
-            <a href="{{ route('reservation.create', ['id' => $voyage->id]) }}" class="btn btn-dark text-light my-3">Réservez maintenant</a>
+            <a href="{{ route('reservation.create', ['nom' => $voyage->nom]) }}" class="btn btn-dark text-light my-3">Réservez maintenant</a>
         </center>
-        
-        @if($voyage->id == 1)
+
+        @if($voyage->nom == "Dakhla_Road_Trip")
             <div class="mx-2">
             <h1 class="text-center" style="font-weight :bold;">Dakhla Road Trip Best Program Morocco </h1>
             
@@ -170,7 +170,7 @@
             <b>La Bonne Humeur / Esprit d’Aventure sont exigés !!!</b> 
         </div>
 
-        @elseif($voyage->id == 2)
+        @elseif($voyage->nom == "Dreamy_5_Stars_Destination")
             <div class="mx-2">
                 <h1 class="text-center" style="font-weight :bold;">Welcome to Taghazout White Beach Resort Ultra All Inclusive 5*</h1>
                 
@@ -247,7 +247,7 @@
                 <p>*Places très limitées !!!</p>
             </div>
 
-        @elseif($voyage->id == 3)
+        @elseif($voyage->nom == "Radisson_Blu_Al_Hoceima_5*_Premium_Package")
             <div class="mx-2">
                 <h1 class="text-center" style="font-weight :bold;">Welcome to Radisson Blu Al Hoceima 5* Premium Package</h1>
                     
@@ -330,7 +330,7 @@
                     <p>*Places très limitées !!!</p>
                 </div>
 
-                @elseif($voyage->id == 4)
+                @elseif($voyage->nom == "Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol")
                     <div class="mx-2">
                         <h1 class="text-center" style="font-weight :bold;">Welcome to Dreamy 5 Stars Destination Summer 2024</h1>
                         
@@ -417,7 +417,7 @@
                         <p>*Places très limitées !!!</p>
                     </div>
 
-                    @elseif($voyage->id == 5)
+                    @elseif($voyage->nom == "Taghazout_White_Beach_Resort")
                         <div class="mx-2">
                             <h1 class="text-center" style="font-weight :bold;">Welcome to Radisson Blu Al Hoceima 5* Premium Package par Vol.</h1>
                             

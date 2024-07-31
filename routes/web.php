@@ -8,19 +8,23 @@ Route::get('/', function () {
     return view('slider.slider');
 });
 
+Route::get('/slider', function () {
+    return view('slider.slider');
+})->name('slider.slider');
 
-
+// Voyage
 Route::resource('voyage',VoyageController::class);
-Route::get('/voyage/{id}', [VoyageController::class, 'show'])->name('voyage.detail');
+Route::get('/voyage/{nom}', [VoyageController::class, 'show'])->name('voyage.detail');
 
+// Reservation
 Route::get('/reservation/create', [ReservationController::class, 'create'])->name('reservation.create');
 Route::post('/reservation/store', [ReservationController::class, 'store'])->name('reservation.store');
-Route::get('/reservation/create/{id}', [ReservationController::class, 'create'])->name('reservation.create');
+Route::get('/reservation/create/{nom}', [ReservationController::class, 'create'])->name('reservation.create');
 
 
 
 
-
+/*
 
 // Dakhla
 Route::get('/Dakhla_Road_Trip_Best_Program_Morocco', function () {
@@ -46,7 +50,4 @@ Route::get('/Dreamy_5*_Destination', function () {
 Route::get('/Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol', function () {
     return view('voyages/Hoceima2.detail');
 });
-
-Route::get('/slider', function () {
-    return view('slider.slider');
-})->name('slider.slider');
+*/
