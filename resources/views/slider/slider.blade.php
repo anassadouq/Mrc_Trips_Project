@@ -67,27 +67,22 @@
         <div class="owl-carousel owl-theme">
             <div class="item" style="background-image: url('{{ asset('images/P Dakhla.jpg') }}');">
                 <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['nom' => 'Dakhla_Road_Trip']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'dakhla-road-trip']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Taghazout.jpg') }}');">
                 <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['nom' => 'Dreamy_5_Stars_Destination']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'taghazout-white-beach']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>            
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Hoceima 3.jpg') }}');">
             <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['nom' => 'Radisson_Blu_Al_Hoceima_5*_Premium_Package']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'radisson-package-vol']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
             <div class="item" style="background-image: url('{{ asset('images/P Saidia.jpg') }}');">
             <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['nom' => 'Radisson_Blu_Al_Hoceima_5*_Premium_Package_par_Vol']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
-                </div>
-            </div>
-            <div class="item" style="background-image: url('{{ asset('images/P Hoceima 2.jpg') }}');">
-            <div class="text-center">
-                    <a href="{{ route('voyage.detail', ['nom' => 'Taghazout_White_Beach_Resort']) }}" class="text-dark text-center m-5 btn btn-light">View Details</a>
+                    <a href="{{ route('voyage.detail', ['nom' => 'saidia-hoceima-5stars']) }}" class="text-dark text-center m-3 btn btn-light">View Details</a>
                 </div>
             </div>
         </div>

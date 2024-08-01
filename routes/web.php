@@ -14,7 +14,7 @@ Route::get('/slider', function () {
 
 // Voyage
 Route::resource('voyage',VoyageController::class);
-Route::get('/voyage/{nom}', [VoyageController::class, 'show'])->name('voyage.detail');
+Route::get('/trip/{nom}', [VoyageController::class, 'show'])->name('voyage.detail');
 
 // Reservation
 Route::get('/reservation/create', [ReservationController::class, 'create'])->name('reservation.create');
