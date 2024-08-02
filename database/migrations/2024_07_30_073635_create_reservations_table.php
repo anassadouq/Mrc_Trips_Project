@@ -10,13 +10,12 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_voyage');
-            $table->foreign('nom_voyage')->references('nom')->on('voyages')->onUpdate('cascade')->onDelete('cascade');
-            $table->date('dateD');
+            $table->string('trip_name');
             $table->string('nom');
             $table->string('prenom');
             $table->string('cin');
             $table->string('tel');
+            $table->date('dateD');
             $table->string('ville_depart');
             $table->string('email');
             $table->timestamps();
