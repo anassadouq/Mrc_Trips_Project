@@ -13,13 +13,12 @@
                     font-weight:bold;
                 }
                 .form-container {
-                    width: 100%;
-                    max-width: 600px;
-                    margin: 20px auto;
-                    padding: 15px;
-                    border: 1px solid #ccc;
+                    max-width: 500px;
+                    margin: auto;
+                    padding: 10px;
+                    border: 1px solid #ddd;
                     border-radius: 5px;
-                    background-color: #f9f9f9;
+                    background-color: white;
                 }
             </style>
 
@@ -98,43 +97,44 @@
                 <p>( Renseignez-vous sur les disponibilités )</p>
                 <p>*Places très limitées !!!</p>
             </div><br><br>
+
             <h2 class="text-center">RESERVATION : </h2>
-            <form method="post" action="{{ route('reservation.store') }}" style="width:30%;" class="form-container">
+             <form method="post" action="{{ route('reservation.store') }}" class="form-container">
                 @csrf
                 <div class="mb-3">
                     <input type="hidden" name="trip_name" value="taghazout-white-beach">
                 </div>
-                <div class="row">
-                    <div class="col mb-3">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="nom" class="form-label">Nom :</label>
                         <input type="text" name="nom" placeholder="Nom" class="form-control" required>
                     </div>
-                    <div class="col mb-3">
+                    <div class="form-group col-md-6">
                         <label for="prenom" class="form-label">Prenom :</label>
                         <input type="text" name="prenom" placeholder="Prenom" class="form-control" required>
                     </div>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label for="cin" class="form-label">CIN :</label>
                     <input type="text" name="cin" placeholder="CIN" class="form-control" required>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label for="tel" class="form-label">Telephone :</label>
                     <input type="text" name="tel" placeholder="Telephone" class="form-control" required>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label class="form-label">Date de départ :</label>
                     <input type="date" name="dateD" class="form-control" required>
-                </div>                
-                <div class="mb-3">
+                </div>
+                <div class="form-group">
                     <label for="ville_depart" class="form-label">Ville de départ :</label>
                     <input type="text" name="ville_depart" placeholder="Ville de départ" class="form-control" required>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label for="email" class="form-label">Email :</label>
                     <input type="email" name="email" placeholder="exemple@gmail.com" class="form-control" required>
                 </div>
-                <button type="submit" class="my-1 form-control btn btn-dark text-light">Réserver</button>
+                <button type="submit" class="btn btn-dark btn-block">Réserver</button>
             </form>
         </body>
     </html>
