@@ -41,7 +41,7 @@
             <div class="row mt-4">
                 <div class="col-md-6 image-container">
                     <img src="images/P Hoceima 3.jpg" alt="Hoceima">
-                    <a href="/trip/hoceima3" class="btn btn-light btn-detail">Detail</a>
+                    <a href="/trip/radisson-blu-package" class="btn btn-light btn-detail">Detail</a>
                 </div>
                 <div class="col-md-6 image-container">
                     <img src="images/P Saidia.jpg" alt="Saidia">
@@ -52,6 +52,26 @@
                 <div class="col-md-6 image-container">
                     <img src="images/P Hoceima 2.jpg" alt="Hoceima">
                     <a href="/trip/radisson-package-vol" class="btn btn-light btn-detail">Detail</a>
+                </div>
+                <div class="col-md-6 image-container">
+                    <img src="images/egypt.jpg" alt="Hoceima">
+                    <a href="/trip/egypt-classic-5-tour" class="btn btn-light btn-detail">Detail</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 image-container">
+                    <img src="images/antalya.jpg" alt="Hoceima">
+                    <a href="/trip/antalya-istanbul-summer-2024" class="btn btn-light btn-detail">Detail</a>
+                </div>
+                <div class="col-md-6 image-container">
+                    <img src="images/dubai.jpg" alt="Hoceima">
+                    <a href="/trip/dubai-istanbul-summer-trip" class="btn btn-light btn-detail">Detail</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 image-container">
+                    <img src="images/istanbul magic.jpg" alt="Hoceima">
+                    <a href="/trip/istanbul-magical-holiday-summer-2024" class="btn btn-light btn-detail">Detail</a>
                 </div>
             </div>
         </div>

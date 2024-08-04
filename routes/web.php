@@ -17,7 +17,7 @@ Route::get('/trip/dakhla-road-trip', function () {
 })->name('voyage.dakhla');
 
 // Hoceima
-Route::get('/trip/hoceima3', function () {
+Route::get('/trip/radisson-blu-package', function () {
     return view('voyage.hoceima3');
 })->name('voyage.hoceima3');
 
@@ -31,11 +31,30 @@ Route::get('/trip/taghazout-white-beach', function () {
     return view('voyage.taghazout');
 })->name('voyage.taghazout');
 
-// Taghazout
+// Hoceima vol
 Route::get('/trip/radisson-package-vol', function () {
     return view('voyage.hoceima2');
-})->name('voyage.taghazout');
+})->name('voyage.hoceima2');
 
+// Egypt
+Route::get('/trip/egypt-classic-5-tour', function () {
+    return view('voyage.egypt');
+})->name('voyage.egypt');
+
+// Antalya
+Route::get('/trip/antalya-istanbul-summer-2024', function () {
+    return view('voyage.antalya');
+})->name('voyage.antalya');
+
+// Hoceima vol
+Route::get('/trip/dubai-istanbul-summer-trip', function () {
+    return view('voyage.dubai');
+})->name('voyage.dubai');
+
+// Hoceima vol
+Route::get('/trip/istanbul-magical-holiday-summer-2024', function () {
+    return view('voyage.istanbul');
+})->name('voyage.istanbul');
 // Reservation
 Route::get('/reservation/create', [ReservationController::class, 'create'])->name('reservation.create');
 Route::post('/reservation/store', [ReservationController::class, 'store'])->name('reservation.store');

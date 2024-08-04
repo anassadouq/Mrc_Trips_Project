@@ -109,7 +109,7 @@
             <form method="post" action="{{ route('reservation.store') }}" class="form-container">
                 @csrf
                 <div class="mb-3">
-                    <input type="hidden" name="trip_name" value="hoceima3">
+                    <input type="hidden" name="trip_name" value="radisson-blu-package">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
